@@ -1,7 +1,6 @@
 // Assignment code here
 var charLength = 8;
 var charArr = [];
-
 var symbolArr = ['!', '@', '#', '$', '%', '&', '*'];
 var lowerArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -21,6 +20,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = newPass;
+
   }
 
   else {
@@ -43,6 +43,8 @@ function generatePassword() {
 
 function getPrompt() {
   charArr = [];
+
+  // prompts for password parameters
    
   charLength = parseInt(prompt("How many characters would you like in your password?"));
   if(isNaN(charLength) || charLength < 8 || charLength > 128) {
