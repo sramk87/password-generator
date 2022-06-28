@@ -23,5 +23,7 @@ THEN a password is generated that matches the selected criteria</br>
 WHEN the password is generated</br>
 THEN the password is either displayed in an alert or written to the page</br>
 
+https://sramk87.github.io/password-generator/ </br>
+
 <img width="1440" alt="Screen Shot 2022-06-28 at 1 26 45 PM" src="https://user-images.githubusercontent.com/106551994/176245194-2d3e6d79-369f-474a-a1df-e106d8d1b574.png">
 
