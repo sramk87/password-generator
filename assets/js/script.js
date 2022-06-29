@@ -29,6 +29,7 @@ function writePassword() {
 
 }
 
+// Generate password 
 function generatePassword() {
 
   var password = "";
@@ -44,8 +45,7 @@ function generatePassword() {
 function getPrompt() {
   charArray = [];
 
-  // prompts for password parameters
-   
+  // Prompts for password parameters  
   charLength = parseInt(prompt("How many characters would you like in your password?"));
   if(isNaN(charLength) || charLength < 8 || charLength > 128) {
     alert("Password length has to be a number between 8 and 128. Try again.");
