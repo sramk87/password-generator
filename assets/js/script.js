@@ -1,10 +1,10 @@
 // Assignment code here
 var charLength = 8;
-var charArr = [];
-var symbolArr = ['!', '@', '#', '$', '%', '&', '*'];
-var lowerArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var upperArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var numberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var charArray = [];
+var symbolArray = ['!', '@', '#', '$', '%', '&', '*'];
+var lowerArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var upperArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -33,8 +33,8 @@ function generatePassword() {
 
   var password = "";
   for(var i = 0; i < charLength; i++) {
-    var randomChar = Math.floor(Math.random() * charArr.length);
-    password = password + charArr[randomChar];
+    var randomChar = Math.floor(Math.random() * charArray.length);
+    password = password + charArray[randomChar];
   }
 
   return password;
@@ -42,7 +42,7 @@ function generatePassword() {
 }
 
 function getPrompt() {
-  charArr = [];
+  charArray = [];
 
   // prompts for password parameters
    
@@ -53,19 +53,19 @@ function getPrompt() {
   }
 
   if (confirm("Would you like to add lowercase letters to your password?")) {
-    charArr = charArr.concat(lowerArr);
+    charArray = charArray.concat(lowerArray);
   }
 
   if (confirm("Would you like to add uppercase letters to your password?")) {
-    charArr = charArr.concat(upperArr);
+    charArray = charArray.concat(upperArray);
   }
 
   if (confirm("Would you like to add special characters to your password?")) {
-    charArr = charArr.concat(symbolArr);
+    charArray = charArray.concat(symbolArray);
   }
 
   if (confirm("Would you like to add numbers to your password?")) {
-    charArr = charArr.concat(numberArr);
+    charArray = charArray.concat(numberArray);
   }
 
   return true;
